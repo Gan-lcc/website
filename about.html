@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="REDLINE MOTORS — философия, ценности и подход к выбору автомобилей.">
+    <title>О компании — REDLINE MOTORS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-hero {
+            padding: 105px 0 90px;
+            background:
+                linear-gradient(90deg, rgba(11,11,12,.98), rgba(11,11,12,.55)),
+                url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1900&q=85") center/cover;
+        }
+
+        .about-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(55px, 8vw, 100px);
+            line-height: .98;
+            font-weight: 500;
+            margin-top: 25px;
+        }
+
+        .about-hero h1 span {
+            color: var(--accent);
+        }
+
+        .about-hero p {
+            max-width: 500px;
+            color: #c1c1c4;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-top: 28px;
+        }
+
+        .about-story {
+            padding: 110px 0;
+        }
+
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 75px;
+        }
+
+        .about-story h2,
+        .about-values h2,
+        .about-contact h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(42px, 5vw, 65px);
+            line-height: 1.08;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .about-story h2 span,
+        .about-contact h2 span {
+            color: var(--accent);
+        }
+
+        .about-story p {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 2;
+            margin-top: 22px;
+        }
+
+        .about-photo {
+            position: relative;
+        }
+
+        .about-photo img {
+            height: 460px;
+            object-fit: cover;
+        }
+
+        .about-photo-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 12px 16px;
+            background: var(--accent);
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .about-values {
+            padding: 100px 0;
+            background: var(--bg-soft);
+        }
+
+        .about-values-heading {
+            margin-bottom: 45px;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .value-card {
+            padding: 32px;
+            min-height: 235px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .value-number {
+            color: var(--accent);
+            font-family: var(--font-heading);
+            font-size: 30px;
+        }
+
+        .value-card h3 {
+            font-size: 16px;
+            margin-top: 25px;
+        }
+
+        .value-card p {
+            color: var(--text-secondary);
+            font-size: 12px;
+            line-height: 1.8;
+            margin-top: 12px;
+        }
+
+        .about-contact {
+            padding: 110px 0;
+            text-align: center;
+        }
+
+        .about-contact .section-label {
+            display: block;
+        }
+
+        .about-contact h2 {
+            margin-bottom: 25px;
+        }
+
+        .about-contact p {
+            max-width: 480px;
+            margin: 0 auto 30px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 800px) {
+            .about-story-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-photo img {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .about-hero {
+                padding: 75px 0;
+            }
+
+            .about-story,
+            .about-values,
+            .about-contact {
+                padding: 75px 0;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">R</span>
+                <span class="logo-text">
+                    <strong>REDLINE</strong>
+                    <small>MOTORS</small>
+                </span>
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="models.html" class="nav-link">Автомобили</a>
+                <a href="about.html" class="nav-link active">О компании</a>
+            </nav>
+
+            <a href="models.html" class="header-button">
+                Каталог
+                <span class="arrow">↗</span>
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="about-hero">
+            <div class="container">
+
+                <div class="section-label">REDLINE MOTORS / ABOUT US</div>
+
+                <h1>
+                    МЫ ВЫБИРАЕМ<br>
+                    <span>БОЛЬШЕЕ.</span>
+                </h1>
+
+                <p>
+                    REDLINE MOTORS — автомобильный проект,
+                    созданный вокруг идеи, что автомобиль
+                    должен отражать характер своего владельца.
+                </p>
+
+            </div>
+        </section>
+
+        <section class="about-story">
+            <div class="container about-story-grid">
+
+                <div>
+
+                    <div class="section-label">01 / НАША ИСТОРИЯ</div>
+
+                    <h2>
+                        За каждым<br>
+                        автомобилем<br>
+                        стоит <span>идея.</span>
+                    </h2>
+
+                    <p>
+                        Мы создали REDLINE MOTORS как пространство
+                        для тех, кто воспринимает автомобили
+                        не только как средство передвижения.
+                    </p>
+
+                    <p>
+                        Для нас важны пропорции кузова, инженерные
+                        решения, динамика, технологии и ощущения,
+                        которые остаются после каждой поездки.
+                    </p>
+
+                    <p>
+                        Наша задача — показать автомобиль
+                        с его лучшей стороны и помочь человеку
+                        найти модель, которая соответствует его
+                        представлениям о движении.
+                    </p>
+
+                </div>
+
+                <div class="about-photo">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=85"
+                        alt="Автомобиль в фирменной атмосфере REDLINE"
+                    >
+
+                    <div class="about-photo-label">
+                        BUILT AROUND YOUR PASSION
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-values">
+
+            <div class="container">
+
+                <div class="about-values-heading">
+                    <div class="section-label">02 / НАШИ ПРИНЦИПЫ</div>
+                    <h2>Что нас определяет.</h2>
+                </div>
+
+                <div class="value-grid">
+
+                    <article class="value-card">
+                        <div class="value-number">01</div>
+                        <h3>Характер</h3>
+                        <p>
+                            Каждый автомобиль обладает собственной
+                            индивидуальностью. Мы ценим то,
+                            что отличает одну модель от другой.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-number">02</div>
+                        <h3>Качество</h3>
+                        <p>
+                            Внимание к деталям, продуманная подача
+                            информации и стремление к высокому
+                            уровню исполнения.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-number">03</div>
+                        <h3>Технологии</h3>
+                        <p>
+                            Мы следим за развитием автомобильной
+                            индустрии и ценим современные
+                            инженерные решения.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-number">04</div>
+                        <h3>Индивидуальность</h3>
+                        <p>
+                            Выбор автомобиля начинается
+                            с понимания потребностей,
+                            стиля и личных предпочтений.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-number">05</div>
+                        <h3>Эмоции</h3>
+                        <p>
+                            Автомобиль — это не только
+                            характеристики. Это ощущения,
+                            звук и впечатления от дороги.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-number">06</div>
+                        <h3>Развитие</h3>
+                        <p>
+                            Постоянное совершенствование
+                            и стремление создавать
+                            более качественный опыт.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="about-contact">
+
+            <div class="container">
+
+                <div class="section-label">03 / ВЫБОР ЗА ТОБОЙ</div>
+
+                <h2>
+                    ТВОЯ ИСТОРИЯ.<br>
+                    <span>ТВОЙ АВТОМОБИЛЬ.</span>
+                </h2>
+
+                <p>
+                    Изучи нашу подборку и найди автомобиль,
+                    который станет продолжением твоего характера.
+                </p>
+
+                <a href="models.html" class="button button-primary">
+                    Перейти в каталог
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">R</span>
+                <span class="logo-text">
+                    <strong>REDLINE</strong>
+                    <small>MOTORS</small>
+                </span>
+            </a>
+
+            <div class="footer-copy">
+                © 2026 REDLINE MOTORS<br>
+                АВТОМОБИЛИ С ХАРАКТЕРОМ
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Главная</a>
+                <a href="models.html">Каталог</a>
+                <a href="about.html">О компании</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
