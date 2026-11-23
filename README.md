@@ -38,4 +38,6 @@ Gan lcc.
 
 ## Ссылка на сайт
 
-Будет добавлена после публикации на GitHub Pages.
+**Сайт:** https://gan-lcc.github.io/website/
+
+**GitHub репозиторий:** https://github.com/Gan-lcc/website
